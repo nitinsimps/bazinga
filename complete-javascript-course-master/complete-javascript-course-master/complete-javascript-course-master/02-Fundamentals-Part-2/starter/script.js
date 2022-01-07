@@ -207,24 +207,41 @@ console.log(details.getsummry());
 //     return `${this.fullName} and his BMI is ${this.BMI()}`;
 //   },
 // };
-console.log(Mark.BMI());
-console.log(Mark.BMIIndex);
-const John = {
-  fullName: "John Adams",
-  Mass: 92,
-  Height: 1.95,
-  BMI: function () {
-    this.BMIIndex = this.Mass / this.Height ** 2;
-    return this.BMIIndex;
-  },
-  details: function () {
-    return `${this.fullName} and his BMI is ${this.BMI()}`;
-  },
-};
-console.log(
-  `${Mark.details()}, \n${John.details()},\n${
-    Mark.BMIIndex > John.BMIIndex
-      ? "Mark has higher BMI" 
-      : "John has higher BMI" 
-  }`
-);
+// console.log(Mark.BMI());
+// console.log(Mark.BMIIndex);
+// const John = {
+//   fullName: "John Adams",
+//   Mass: 92,
+//   Height: 1.95,
+//   BMI: function () {
+//     this.BMIIndex = this.Mass / this.Height ** 2;
+//     return this.BMIIndex;
+//   },
+//   details: function () {
+//     return `${this.fullName} and his BMI is ${this.BMI()}`;
+//   },
+// };
+// console.log(
+//   `${Mark.details()}, \n${John.details()},\n${
+//     Mark.BMIIndex > John.BMIIndex
+//       ? "Mark has higher BMI" 
+//       : "John has higher BMI" 
+//   }`
+// );
+const types = [];
+const details = ['Nitin','Singh','Family',true,1987,['rani','ravi','rohan']];
+for (let i = 0; i < details.length; i++){
+  console.log(details[i],typeof details[i]);
+  types.push(typeof details[i]);
+}
+console.log(types);
+
+const years = [1987,1989,2001,2005];
+years.push(2008);
+const age = [];
+for (let i = 0;i<years.length;i++){
+  
+  age.push(2022-years[i]);
+  
+}
+console.log(age);
