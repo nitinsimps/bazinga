@@ -195,18 +195,18 @@ console.log(details.getsummry());
 //         console.log(`Johns BMI (${johnBMI}) is higher than Marks (${markBMI})`);
 //     }
 
-const Mark = {
-  fullName: "Mark Walhberg",
-  Mass: 98,
-  Height: 1.9,
-  BMI: function () {
-    this.BMIIndex = this.Mass / this.Height ** 2;
-    return this.BMIIndex;
-  },
-  details: function () {
-    return `${this.fullName} and his BMI is ${this.BMI()}`;
-  },
-};
+// const Mark = {
+//   fullName: "Mark Walhberg",
+//   Mass: 98,
+//   Height: 1.9,
+//   BMI: function () {
+//     this.BMIIndex = this.Mass / this.Height ** 2;
+//     return this.BMIIndex;
+//   },
+//   details: function () {
+//     return `${this.fullName} and his BMI is ${this.BMI()}`;
+//   },
+// };
 console.log(Mark.BMI());
 console.log(Mark.BMIIndex);
 const John = {
