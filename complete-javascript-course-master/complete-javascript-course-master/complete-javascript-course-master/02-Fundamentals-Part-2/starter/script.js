@@ -228,20 +228,16 @@ console.log(details.getsummry());
 //       : "John has higher BMI" 
 //   }`
 // );
-const types = [];
-const details = ['Nitin','Singh','Family',true,1987,['rani','ravi','rohan']];
-for (let i = 0; i < details.length; i++){
-  console.log(details[i],typeof details[i]);
-  types.push(typeof details[i]);
-}
-console.log(types);
+// const types = [];
+// const details = ['Nitin','Singh','Family',true,1987,['rani','ravi','rohan']];
+// for (let i = 0; i < details.length; i++){
+//   console.log(details[i],typeof details[i]);
+//   types.push(typeof details[i]);
+// }
+// console.log(types);
 
-const years = [1987,1989,2001,2005];
-years.push(2008);
-const age = [];
-for (let i = 0;i<years.length;i++){
-  
-  age.push(2022-years[i]);
-  
+const details = ['Nitin','Singh',2022-1987,'Analyst',['rani','rohan','riya'],true];
+for (let i = 0;i<details.length;i++){
+  if (typeof details[i] === 'object') break;
+    console.log(details[i], typeof details[i]); 
 }
-console.log(age);
