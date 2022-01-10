@@ -237,7 +237,64 @@ console.log(details.getsummry());
 // console.log(types);
 
 const details = ['Nitin','Singh',2022-1987,'Analyst',['rani','rohan','riya'],true];
-for (let i = 0;i<details.length;i++){
-  if (typeof details[i] === 'object') break;
-    console.log(details[i], typeof details[i]); 
+// for (let i = 0;i<details.length;i++){
+//   if (typeof details[i] === 'object') break;
+//     console.log(details[i], typeof details[i]); 
+// }
+
+// for (let i = details.length -1;i>=0;i--){
+//   console.log(details[i],typeof details[i]);
+// }
+
+// for(let exercise=1;exercise <4;exercise++){
+//   console.log(`----- starting exercise ${exercise}`);
+//   for (let rep = 1;rep<6;rep++){
+//     console.log(`---lifting weight repitioin ${rep}`)
+//   }
+// Math.trunc(Math.random()*6)+1;
+// }
+// let dice = Math.trunc(Math.random()*6)+1;
+// while(dice!== 6){
+//   console.log(`You rolled a ${dice}`);
+//   dice=Math.trunc(Math.random()*6)+1;
+//   if (dice===6){
+//     console.log('Loop ended because you rolled 6');
+//   }
+// }
+
+const calcTip = (bill) => {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
+const bill = [22,295,176,440,37,105,10,1100,86,52];
+const tips =[];
+const totals = [];
+for(let i=0;i<=bill.length-1;i++){
+  tips.push(calcTip(bill[i]));
+  totals.push(bill[i]+tips[i]);
 }
+console.log(tips);
+console.log(totals);
+
+const calcAverage = function (arr) {
+  let sum = 0;
+  for (let i =0;i<arr.length;i++){
+  if (typeof arr[i]!== 'number') continue;
+  sum+=arr[i];
+  }  
+  if (sum === 0){
+  console.log(`there are no numbers in array`);
+  return sum;
+}
+else{
+  return sum/arr.length;
+}
+}
+console.log(`the average of the total bill is ${calcAverage(totals)}`);
+// const tip = [calcTip(bill[0]), calcTip(bill[1]), calcTip(bill[2])];
+// console.log(tip);
+// const total = [bill[0] + bill[1] + bill[2], tip[0] + tip[1] + tip[2]];
+// console.log(`Total bill is ${total[0]} and total tips are ${total[1]}`);
+// const total1 = [bill[0] + tip[0], bill[1] + tip[1], bill[2] + tip[2]];
+// console.log(
+//   `Each bill includig tips is ${total1[0]},${total1[1]},${total1[2]}`
+// );
